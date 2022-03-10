@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>测试报告</title>
+  <meta name="generator" content="HTMLReport 刘士 1.4.7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <style type="text/css" media="screen">
+  body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  pre {
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto
+  }
+
+  h1 {
+    font-size: 16pt;
+    color: gray
+  }
+
+  .heading {
+    margin-top: 0;
+    margin-bottom: 1ex
+  }
+
+  .heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0
+  }
+
+  .heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex
+  }
+
+  a.popup_link:hover {
+    color: red
+  }
+
+  .popup_window {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    background-color: #E6E6D6;
+    text-align: left;
+    font-size: 13px
+  }
+
+  #show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex
+  }
+
+  #result_table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #777
+  }
+
+  #header_row {
+    color: #fff;
+    background-color: #777
+  }
+
+  #result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+    min-width: 70px;
+    width: 100%
+  }
+  
+  #result_table td:nth-child(n+2) {
+    text-align: center
+  }
+
+  #total_row {
+    font-weight: bold
+  }
+
+  .passClass,
+  .failClass,
+  .errorClass,
+  .skipClass {
+    font-weight: bold
+  }
+
+  .passCase {
+    background-color: #97cc64
+  }
+
+  .failCase {
+    background-color: #fd5a3e
+  }
+
+  .errorCase {
+    background-color: #ffd050
+  }
+
+  .skipCase {
+    background-color: #aaa
+  }
+
+  .hiddenRow {
+    display: none
+  }
+
+  .testcase {
+    margin-left: 2em
+  }
+
+  #popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none
+  }
+
+  #popup .bg {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%
+  }
+
+  @media \0screen\,screen\9 {
+    #popup .bg {
+      background-color: #000;
+      filter: Alpha(opacity=50);
+      position: static
+    }
+    #popup .bg img {
+      position: relative
+    }
+  }
+
+  #popup img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  img.pic {
+    width: 500px;
+    cursor: pointer;
+  }
+
+  #wrapper {
+    margin: 0 auto;
+    border-top: solid 2px #666;
+  }
+
+  #wrapper .lang-en {
+    display: none;
+  }
+
+  #wrapper.lang-cn p.lang-cn {
+    display: block;
+  }
+
+  #wrapper.lang-cn span.lang-cn {
+    display: inline;
+  }
+
+  #wrapper.lang-cn .lang-en {
+    display: none;
+  }
+
+  #wrapper.lang-en .lang-cn {
+    display: none;
+  }
+
+  #wrapper.lang-en p.lang-en {
+    display: block;
+  }
+
+  #wrapper.lang-en span.lang-en {
+    display: inline;
+  }
+
+  #lang ul {
+    float: right;
+    margin: 0;
+    padding: 2px 10px 4px 10px;
+    background: #666;
+    border-radius: 0 0 4px 4px;
+    list-style: none;
+  }
+
+  #lang li {
+    margin: 0;
+    float: left;
+    padding: 0 5px;
+  }
+
+  #lang li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: -4em;
+    overflow: hidden;
+    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAHiSURBVHja1Ja/jtNAEMZ/Y2/icBdxXAMSEu/A1dBR0NJQ8CS8AQ0tb4CQgEegPgQFOh7ixJUX4vgSx96ZoUgOO3+KRDgFX7Or0Wg+f7PzeVfcnUMi4cA4OIEAARgAvY5r10AZgOGvl69Gkm4Xk9w3fJTg9f4MDz9+OA3AsSTC4OmThaQE3Bp9w+eRmy+hie2I8us3gOMABFNFkjlW5PTPIvOLAO7YVMjfC/Sd4YuK4nOGuyMiABv7v6pP7mKmACEAeK1YPuPoWU52FgkPUiaf+ngFDjCD+Q/Fproo1vrSbUPuvR4eF7kBwDRi4ynlzxkyUMrvKTZabbrPFb9Jd2qPh7BK4DGiRYFeTJmdC8nAsVKaUes72eOK6Xm2G0GaYhpXCTzPsXEBgOZN8unrktHbAddvAKrdCESwqmoItI74eILlkw0bjt4Zltdg+5hL8NhSYLGmurrCxuPN7Mv951+LAh1kLQWxBlUw68bDGtEqaStQiB0SRMWlbh1yXWPu+MIc/wzTiC0dslBQR0TArfWPwJdr21KyttLKaeJijvmaD0gTMF/z57pPt8W37E1xaylwU0iE5OhON2fgjreMVmuMXC/ntus7QYAT4BFwr+Piv4HL2xstu21Xh4jAXP77V8WfAQAixA0rudAk0AAAAABJRU5ErkJggg==") no-repeat 50% 50%;
+  }
+
+  #lang li a#lang-en {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAIWSURBVHja1JY/SBthGIefu1xqS6K20KFDy0kopUiHmphIByUZotRAIZOTWZzFpYtbB0uh6KJTIdQhi9pBSwmmCOpgoUSKFItTh4AU6tCr16Rn5P58XZocDrlYuAz9wfHAcbzv9/2+932/k4QQdFIyHVbHE0iAAlwFgj7HNoG6AoRzudc/A4F/28yL2l7bb269yd9QgJAsS8zMjFIufyWRuHspXqtbnsHrH8oAIQlQJyfzlaGhCNFohJ2dI1Kp/iZ3d49IJvsvvJckmJ197JlACIEsy30KgGUJBgcjFIufSacfsLnpza2tL/x4+qx15fR0Uz84hL8HjG1blEqHJJP9bGx8IpMZ8CSAMIzWq1cUhO24CSzLYWTkPisrH8lm46yuenN9fZ+br156WmRZFgQLjR3YrK2VyWSiFAp7TEw88iTAyZNca4t6e6h/P3EbzTRtxscfks9vk83G27JaPcOuVls/v6o4pltlajo9L1KpebG8vC9isbm2jMXmRDsZhiEAVWn4NTU1ysJCkenpMRYXS55cWnrPcSThUUVhzrquNEeFOjz8vOI4CrXa+aU7+d3p29YJusMYwQD3Drb7AFRd14Xf0nXdtehbfAxdkhG13/5M0HCImiTcPhC2BVIAHMefOWrbCNxYqqZpvlukaVrTIrNye4CK1JH7xpSAXuAOcN3n4KfAceNG62qch4+ygHPpv/+r+DMAXV79BpyNnBoAAAAASUVORK5CYII=");
+  }
+</style>
+  <script language="javascript" type="text/javascript">
+output_list = Array();
+function showCase(level) {
+  trs = document.getElementsByTagName("tr");
+  for (var i = 0; i < trs.length; i++) {
+    tr = trs[i];
+    id = tr.id;
+    if (id.substr(0, 2) === "st") {
+      if (level === 4 || level === 3) {
+        tr.className = "";
+      } else {
+        tr.className = "hiddenRow";
+      }
+    }
+    if (id.substr(0, 2) === "ft") {
+      if (level === 4 || level === 2) {
+        tr.className = "";
+      } else {
+        tr.className = "hiddenRow";
+      }
+    }
+    if (id.substr(0, 2) === "pt") {
+      if (level === 4 || level === 1) {
+        tr.className = "";
+      } else {
+        tr.className = "hiddenRow";
+      }
+    }
+    if (id.substr(0, 2) === "et") {
+      if (level === 4 || level === 5 || level === 2) {
+        tr.className = "";
+      } else {
+        tr.className = "hiddenRow";
+      }
+    }
+    if (id.substr(0, 4) === "div_") { tr.className = "hiddenRow"; }
+  }
+}
+
+function showClassDetail(cid, count) {
+  var id_list = Array(count);
+  var toHide = 1;
+  for (var i = 0; i < count; i++) {
+    tid0 = "t" + cid.substr(1) + "." + (i + 1);
+    tid = "f" + tid0;
+    tr = document.getElementById(tid);
+    if (!tr) {
+      tid = "p" + tid0;
+      tr = document.getElementById(tid);
+      if (!tr) {
+        tid = "e" + tid0;
+        tr = document.getElementById(tid);
+        if (tr === null) {
+          tid = "s" + tid0;
+          tr = document.getElementById(tid);
+        }
+      }
+    }
+    id_list[i] = tid;
+    if (tr.className) {
+      toHide = 0;
+    }
+  }
+  for (var i = 0; i < count; i++) {
+    tid = id_list[i];
+    if (toHide && tid.indexOf("p") !== -1) {
+      document.getElementById(tid).className = "hiddenRow";
+    } else {
+      document.getElementById(tid).className = "";
+    }
+    document.getElementById("div_" + tid).className = "hiddenRow";
+  }
+}
+
+function showTestDetail(div_id) {
+  var details_div = document.getElementById(div_id);
+  var className = details_div.className;
+  if (className != "") {
+    details_div.className = "";
+  } else {
+    details_div.className = "hiddenRow";
+  }
+}
+
+function html_escape(s) {
+  s = s.replace(/&/g, "&amp;");
+  s = s.replace(/</g, "&lt;");
+  s = s.replace(/>/g, "&gt;");
+  return s;
+}
+
+function load() {
+  var el_wrapper = document.getElementById('wrapper');
+  document.getElementById('lang-cn').onclick = function () { el_wrapper.className = 'lang-cn'; };
+  document.getElementById('lang-en').onclick = function () { el_wrapper.className = 'lang-en'; };
+
+  var h = (location.hash || '').replace(/#/, '');
+  var nav_lang;
+  if (h != 'cn' || h != 'en') {
+    el_wrapper.className = 'lang-' + h;
+  }
+
+  var imgs = document.getElementsByClassName("pic");
+  var lens = imgs.length;
+  var popup = document.getElementById("popup");
+  for (var i = 0; i < lens; i++) {
+    imgs[i].onclick = function (event) {
+      event = event || window.event;
+      var target = document.elementFromPoint(event.clientX, event.clientY);
+      showBig(target.src);
+    };
+  }
+  popup.onclick = function () {
+    popup.getElementsByTagName("img")[0].src = "";
+    popup.style.display = "none";
+    popup.style.zIndex = "-1";
+  };
+  function showBig(src) {
+    popup.getElementsByTagName("img")[0].src = src;
+    popup.style.display = "block";
+    popup.style.zIndex = "999999";
+  }
+}
+</script>
+</head>
+
+<body onload="load()">
+  <div id="wrapper" class="lang-cn">
+    <div id="lang">
+      <ul>
+        <li>
+          <a href="#cn" id="lang-cn" title="简体中文">cn</a>
+        </li>
+        <li>
+          <a href="#en" id="lang-en" title="English">en</a>
+        </li>
+      </ul>
+    </div>
+    <div class='heading'>
+  <h1>测试报告</h1>
+  <p class='attribute'>
+    <strong>
+      <span class="lang-cn">启动时间：</span>
+      <span class="lang-en">Start Time:</span>
+    </strong> 2021-10-26 11:02:45
+  </p>
+  <p class='attribute'>
+    <strong>
+      <span class="lang-cn">结束时间：</span>
+      <span class="lang-en">End Time:</span>
+    </strong> 2021-10-26 11:06:57
+  </p>
+  <p class='attribute'>
+    <strong>
+      <span class="lang-cn">运行时长：</span>
+      <span class="lang-en">Duration:</span>
+    </strong> 0:04:12.375676
+  </p>
+  <p class='attribute'>
+    <strong>
+      <span class="lang-cn">结果：</span>
+      <span class="lang-en">Status:</span>
+    </strong>
+    <span class="lang-cn">合计：</span>
+    <span class="lang-en">Total:</span>20&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-cn">通过：</span>
+    <span class="lang-en">Passed:</span>20&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-cn">失败：</span>
+    <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-cn">错误：</span>
+    <span class="lang-en">Error:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-cn">跳过：</span>
+    <span class="lang-en">Skipped:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+  </p>
+  <p class='description'>webUI自动化测试</p>
+</div> 
+<a href='2021-10-26-11-02-45.log'>
+  <span class="lang-cn">下载日志文件</span>
+  <span class="lang-en">Download log file</span>
+</a>
+ 
+<p id='show_detail_line'>筛选
+  <a href='javascript:showCase(0)'>
+    <span class="lang-cn">摘要</span>
+    <span class="lang-en">Summary</span>
+  </a>
+  <a href='javascript:showCase(1)'>
+    <span class="lang-cn">通过</span>
+    <span class="lang-en">Pass</span>
+  </a>
+  <a href='javascript:showCase(2)'>
+    <span class="lang-cn">失败</span>
+    <span class="lang-en">Fail</span>
+  </a>
+  <a href='javascript:showCase(5)'>
+    <span class="lang-cn">异常</span>
+    <span class="lang-en">Error</span>
+  </a>
+  <a href='javascript:showCase(3)'>
+    <span class="lang-cn">跳过</span>
+    <span class="lang-en">Skip</span>
+  </a>
+  <a href='javascript:showCase(4)'>
+    <span class="lang-cn">全部</span>
+    <span class="lang-en">All</span>
+  </a>
+</p>
+<table id='result_table'>
+  <tr id='header_row'>
+    <th>
+      <span class="lang-cn">测试组/测试用例</span>
+      <span class="lang-en">Test Group/Test case</span>
+    </th>
+    <th>
+      <span class="lang-cn">计数</span>
+      <span class="lang-en">Count</span>
+    </th>
+    <th>
+      <span class="lang-cn">通过</span>
+      <span class="lang-en">Passed</span>
+    </th>
+    <th>
+      <span class="lang-cn">失败</span>
+      <span class="lang-en">Failed</span>
+    </th>
+    <th>
+      <span class="lang-cn">错误</span>
+      <span class="lang-en">Erroneous</span>
+    </th>
+    <th>
+      <span class="lang-cn">跳过</span>
+      <span class="lang-en">Skipped</span>
+    </th>
+    <th>
+      <span class="lang-cn">统计</span>
+      <span class="lang-en">Statistics</span>
+    </th>
+    <th>
+      <span class="lang-cn">查看</span>
+      <span class="lang-en">View</span>
+    </th>
+  </tr>
+  
+<tr class='passClass'>
+  <td>Test001_Business_center_salary_manage.Test_Bcsm</td>
+  <td>3</td>
+  <td class="passCase">3</td>
+  <td class="failCase">0</td>
+  <td class="errorCase">0</td>
+  <td class="skipCase">0</td>
+  <td style="text-align:right;">100.00%</td>
+  <td>
+    <a href="javascript:showClassDetail('c1',3)">
+      <span class="lang-cn">细节</span>
+      <span class="lang-en">Detail</span>
+    </a>
+  </td>
+</tr>
+
+<tr id='pt1.1' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_001_新建工资表: 新建工资表测试</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt1.1' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt1.1: 
+[   INFO] [2021-10-26 11:02:45,134] [8844] [Result.py(48)] - 开始测试： test_001_新建工资表 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:02:46,292] [8844] [Test001_Business_center_salary_manage.py(18)] - 测试开始
+[   INFO] [2021-10-26 11:02:46,614] [8844] [Test001_Business_center_salary_manage.py(20)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:02:47,682] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:02:47,737] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:02:48,779] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:02:49,811] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:02:50,833] [8844] [Test001_Business_center_salary_manage.py(25)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:02:51,860] [8844] [Test001_Business_center_salary_manage.py(37)] - 点击应用
+[   INFO] [2021-10-26 11:02:52,886] [8844] [Test001_Business_center_salary_manage.py(41)] - 点击薪资管理
+[   INFO] [2021-10-26 11:02:54,438] [8844] [Test001_Business_center_salary_manage.py(46)] - 点击新建工资表
+[   INFO] [2021-10-26 11:02:55,504] [8844] [Test001_Business_center_salary_manage.py(51)] - 点击选择月份
+[   INFO] [2021-10-26 11:02:57,554] [8844] [Test001_Business_center_salary_manage.py(57)] - 点击选择九月份
+[   INFO] [2021-10-26 11:02:59,634] [8844] [Test001_Business_center_salary_manage.py(66)] - 输入工资单名称001
+[   INFO] [2021-10-26 11:03:00,685] [8844] [Test001_Business_center_salary_manage.py(71)] - 引入历史数据
+[   INFO] [2021-10-26 11:03:00,727] [8844] [Test001_Business_center_salary_manage.py(74)] - 选择testp模板
+[   INFO] [2021-10-26 11:03:02,764] [8844] [Test001_Business_center_salary_manage.py(79)] - 点击下一步
+[   INFO] [2021-10-26 11:03:03,810] [8844] [Test001_Business_center_salary_manage.py(84)] - 点添加员工
+[   INFO] [2021-10-26 11:03:03,897] [8844] [Test001_Business_center_salary_manage.py(89)] - 输入姓名 皮永宜 查询
+[   INFO] [2021-10-26 11:03:04,941] [8844] [Test001_Business_center_salary_manage.py(98)] - 选中 皮永宜 
+[   INFO] [2021-10-26 11:03:06,980] [8844] [Test001_Business_center_salary_manage.py(103)] - 点击确定 
+[   INFO] [2021-10-26 11:03:08,043] [8844] [Test001_Business_center_salary_manage.py(108)] - 输入基本工资0.01元
+[   INFO] [2021-10-26 11:03:09,262] [8844] [Test001_Business_center_salary_manage.py(32)] - 测试结束
+[   INFO] [2021-10-26 11:03:09,262] [8844] [Result.py(107)] - 测试执行通过： test_001_新建工资表 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:09,262] [8844] [Result.py(59)] - 测试结束： test_001_新建工资表 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:09,262] [8844] [Result.py(61)] - 耗时： 24.128312
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_03_08_568.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt1.2' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_002_工资表提交审核: 工资表提交审核测试</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt1.2' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt1.2: 
+[   INFO] [2021-10-26 11:03:09,262] [8844] [Result.py(48)] - 开始测试： test_002_工资表提交审核 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:10,355] [8844] [Test001_Business_center_salary_manage.py(18)] - 测试开始
+[   INFO] [2021-10-26 11:03:10,648] [8844] [Test001_Business_center_salary_manage.py(20)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:03:11,718] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:03:11,773] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:03:12,814] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:03:13,845] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:03:14,868] [8844] [Test001_Business_center_salary_manage.py(25)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:03:15,896] [8844] [Test001_Business_center_salary_manage.py(118)] - 点击应用
+[   INFO] [2021-10-26 11:03:17,923] [8844] [Test001_Business_center_salary_manage.py(122)] - 点击薪资管理
+[   INFO] [2021-10-26 11:03:19,478] [8844] [Test001_Business_center_salary_manage.py(128)] - 点击审核
+[   INFO] [2021-10-26 11:03:20,524] [8844] [Test001_Business_center_salary_manage.py(134)] - 点击提交审核
+[   INFO] [2021-10-26 11:03:21,614] [8844] [Test001_Business_center_salary_manage.py(140)] - 输入姓名 皮永宜 查询
+[   INFO] [2021-10-26 11:03:23,670] [8844] [Test001_Business_center_salary_manage.py(149)] - 选择 皮永宜
+[   INFO] [2021-10-26 11:03:24,739] [8844] [Test001_Business_center_salary_manage.py(155)] - 点击确定
+[   INFO] [2021-10-26 11:03:25,793] [8844] [Test001_Business_center_salary_manage.py(162)] - 确定提交审核
+[   INFO] [2021-10-26 11:03:25,844] [8844] [Test001_Business_center_salary_manage.py(165)] - 点击审核工资表
+[   INFO] [2021-10-26 11:03:27,074] [8844] [Test001_Business_center_salary_manage.py(32)] - 测试结束
+[   INFO] [2021-10-26 11:03:27,074] [8844] [Result.py(107)] - 测试执行通过： test_002_工资表提交审核 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:27,074] [8844] [Result.py(59)] - 测试结束： test_002_工资表提交审核 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:27,074] [8844] [Result.py(61)] - 耗时： 17.811261
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_03_25_586.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt1.3' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_003_工资表提交发放: 工资表提交发放测试</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt1.3' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt1.3: 
+[   INFO] [2021-10-26 11:03:27,074] [8844] [Result.py(48)] - 开始测试： test_003_工资表提交发放 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:28,176] [8844] [Test001_Business_center_salary_manage.py(18)] - 测试开始
+[   INFO] [2021-10-26 11:03:28,493] [8844] [Test001_Business_center_salary_manage.py(20)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:03:29,564] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:03:29,619] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:03:30,661] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:03:31,692] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:03:32,715] [8844] [Test001_Business_center_salary_manage.py(25)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:03:33,740] [8844] [Test001_Business_center_salary_manage.py(173)] - 点击应用
+[   INFO] [2021-10-26 11:03:35,767] [8844] [Test001_Business_center_salary_manage.py(177)] - 点击薪资管理
+[   INFO] [2021-10-26 11:03:37,465] [8844] [Test001_Business_center_salary_manage.py(182)] - 点击审核工资表
+[   INFO] [2021-10-26 11:03:38,529] [8844] [Test001_Business_center_salary_manage.py(187)] - 点击审核按钮
+[   INFO] [2021-10-26 11:03:40,569] [8844] [Test001_Business_center_salary_manage.py(194)] - 点击提交发放
+[   INFO] [2021-10-26 11:03:42,660] [8844] [Test001_Business_center_salary_manage.py(200)] - 输入姓名 皮永宜 查询
+[   INFO] [2021-10-26 11:03:43,705] [8844] [Test001_Business_center_salary_manage.py(208)] - 选中 皮永宜
+[   INFO] [2021-10-26 11:03:44,776] [8844] [Test001_Business_center_salary_manage.py(214)] - 点击确定
+[   INFO] [2021-10-26 11:03:46,828] [8844] [Test001_Business_center_salary_manage.py(222)] - 确定提交发放
+[   INFO] [2021-10-26 11:03:48,108] [8844] [Test001_Business_center_salary_manage.py(32)] - 测试结束
+[   INFO] [2021-10-26 11:03:48,108] [8844] [Result.py(107)] - 测试执行通过： test_003_工资表提交发放 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:48,108] [8844] [Result.py(59)] - 测试结束： test_003_工资表提交发放 (Test001_Business_center_salary_manage.Test_Bcsm)
+[   INFO] [2021-10-26 11:03:48,108] [8844] [Result.py(61)] - 耗时： 21.033148499999996
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_03_47_76.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr class='passClass'>
+  <td>Test002_Business_center_electronic_account_manage.Test_Bceam</td>
+  <td>8</td>
+  <td class="passCase">8</td>
+  <td class="failCase">0</td>
+  <td class="errorCase">0</td>
+  <td class="skipCase">0</td>
+  <td style="text-align:right;">100.00%</td>
+  <td>
+    <a href="javascript:showClassDetail('c2',8)">
+      <span class="lang-cn">细节</span>
+      <span class="lang-en">Detail</span>
+    </a>
+  </td>
+</tr>
+
+<tr id='pt2.1' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_001_众邦电子账户充值: 点击众邦电子账户充值</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.1' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.1: 
+[   INFO] [2021-10-26 11:03:48,108] [8844] [Result.py(48)] - 开始测试： test_001_众邦电子账户充值 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:03:49,201] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:03:49,527] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:03:50,598] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:03:50,652] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:03:51,694] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:03:52,726] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:03:53,750] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:03:54,775] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:03:55,799] [8844] [Test002_Business_center_electronic_account_manage.py(43)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:03:57,332] [8844] [Test002_Business_center_electronic_account_manage.py(48)] - 点击充值按钮
+[   INFO] [2021-10-26 11:04:00,574] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:04:00,574] [8844] [Result.py(107)] - 测试执行通过： test_001_众邦电子账户充值 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:00,574] [8844] [Result.py(59)] - 测试结束： test_001_众邦电子账户充值 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:00,574] [8844] [Result.py(61)] - 耗时： 12.466153599999998
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_03_59_432.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.2' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_002_众邦电子账户提现: 点击众邦电子账户提现</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.2' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.2: 
+[   INFO] [2021-10-26 11:04:00,574] [8844] [Result.py(48)] - 开始测试： test_002_众邦电子账户提现 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:01,678] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:04:01,970] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:04:03,039] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:04:03,091] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:04:04,132] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:04:05,163] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:04:06,187] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:04:07,213] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:04:08,239] [8844] [Test002_Business_center_electronic_account_manage.py(59)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:04:09,765] [8844] [Test002_Business_center_electronic_account_manage.py(67)] - 点击众邦电子账户提现
+[   INFO] [2021-10-26 11:04:12,075] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:04:12,075] [8844] [Result.py(107)] - 测试执行通过： test_002_众邦电子账户提现 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:12,075] [8844] [Result.py(59)] - 测试结束： test_002_众邦电子账户提现 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:12,075] [8844] [Result.py(61)] - 耗时： 11.500926899999996
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_04_10_799.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.3' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_003_众邦电子账户修改密码: 点击众邦电子账户更多操作修改密码</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.3' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.3: 
+[   INFO] [2021-10-26 11:04:12,075] [8844] [Result.py(48)] - 开始测试： test_003_众邦电子账户修改密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:13,168] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:04:13,484] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:04:14,557] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:04:14,605] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:04:15,649] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:04:16,679] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:04:17,701] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:04:18,724] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:04:19,749] [8844] [Test002_Business_center_electronic_account_manage.py(79)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:04:22,426] [8844] [Test002_Business_center_electronic_account_manage.py(87)] - 点击更多操作
+[   INFO] [2021-10-26 11:04:23,468] [8844] [Test002_Business_center_electronic_account_manage.py(92)] - 点击电子修改密码
+[   INFO] [2021-10-26 11:04:24,689] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:04:24,689] [8844] [Result.py(107)] - 测试执行通过： test_003_众邦电子账户修改密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:24,689] [8844] [Result.py(59)] - 测试结束： test_003_众邦电子账户修改密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:24,689] [8844] [Result.py(61)] - 耗时： 12.613809799999999
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_04_23_917.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.4' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_004_众邦电子账户重置密码: 点击众邦电子账户更多操作重置密码</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.4' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.4: 
+[   INFO] [2021-10-26 11:04:24,689] [8844] [Result.py(48)] - 开始测试： test_004_众邦电子账户重置密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:25,812] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:04:26,110] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:04:27,182] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:04:27,238] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:04:28,275] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:04:29,305] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:04:30,329] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:04:31,355] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:04:32,380] [8844] [Test002_Business_center_electronic_account_manage.py(102)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:04:34,915] [8844] [Test002_Business_center_electronic_account_manage.py(110)] - 点击更多操作
+[   INFO] [2021-10-26 11:04:34,955] [8844] [Test002_Business_center_electronic_account_manage.py(113)] - 点击重置密码
+[   INFO] [2021-10-26 11:04:37,179] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:04:37,179] [8844] [Result.py(107)] - 测试执行通过： test_004_众邦电子账户重置密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:37,179] [8844] [Result.py(59)] - 测试结束： test_004_众邦电子账户重置密码 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:37,179] [8844] [Result.py(61)] - 耗时： 12.489180900000008
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_04_36_854.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.5' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_005_众邦电子账户自动做账: 点击众邦电子账户更多操作自动做账</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.5')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.5' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.5').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.5: 
+[   INFO] [2021-10-26 11:04:37,179] [8844] [Result.py(48)] - 开始测试： test_005_众邦电子账户自动做账 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:38,321] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:04:38,699] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:04:39,769] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:04:39,818] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:04:40,856] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:04:41,887] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:04:42,910] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:04:43,938] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:04:44,964] [8844] [Test002_Business_center_electronic_account_manage.py(125)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:04:47,508] [8844] [Test002_Business_center_electronic_account_manage.py(133)] - 点击更多操作
+[   INFO] [2021-10-26 11:04:47,557] [8844] [Test002_Business_center_electronic_account_manage.py(136)] - 点击自动做账
+[   INFO] [2021-10-26 11:04:49,775] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:04:49,775] [8844] [Result.py(107)] - 测试执行通过： test_005_众邦电子账户自动做账 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:49,775] [8844] [Result.py(59)] - 测试结束： test_005_众邦电子账户自动做账 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:49,775] [8844] [Result.py(61)] - 耗时： 12.595934800000009
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_04_48_25.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.6' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_006_众邦电子账户交易明细: 点击众邦电子账户更多操作交易明细</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.6')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.6' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.6').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.6: 
+[   INFO] [2021-10-26 11:04:49,775] [8844] [Result.py(48)] - 开始测试： test_006_众邦电子账户交易明细 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:04:50,959] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:04:52,060] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:04:53,133] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:04:53,183] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:04:54,222] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:04:55,257] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:04:56,283] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:04:57,309] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:04:58,335] [8844] [Test002_Business_center_electronic_account_manage.py(148)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:05:00,888] [8844] [Test002_Business_center_electronic_account_manage.py(156)] - 点击更多操作
+[   INFO] [2021-10-26 11:05:00,932] [8844] [Test002_Business_center_electronic_account_manage.py(159)] - 点击交易明细
+[   INFO] [2021-10-26 11:05:03,218] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:05:03,218] [8844] [Result.py(107)] - 测试执行通过： test_006_众邦电子账户交易明细 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:03,218] [8844] [Result.py(59)] - 测试结束： test_006_众邦电子账户交易明细 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:03,218] [8844] [Result.py(61)] - 耗时： 13.443038300000012
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_05_02_495.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.7' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_007_点击电子账户管理发放记录: 点击电子账户管理发放记录</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.7')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.7' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.7').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.7: 
+[   INFO] [2021-10-26 11:05:03,218] [8844] [Result.py(48)] - 开始测试： test_007_点击电子账户管理发放记录 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:04,365] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:05:04,693] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:05:05,764] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:05:05,814] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:05:06,854] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:05:07,886] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:05:08,909] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:05:09,936] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:05:10,962] [8844] [Test002_Business_center_electronic_account_manage.py(171)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:05:13,708] [8844] [Test002_Business_center_electronic_account_manage.py(178)] - 点击发放记录
+[   INFO] [2021-10-26 11:05:13,786] [8844] [Test002_Business_center_electronic_account_manage.py(181)] - 输入工资表名称5.31test
+[   INFO] [2021-10-26 11:05:13,827] [8844] [Test002_Business_center_electronic_account_manage.py(183)] - 点击搜索
+[   INFO] [2021-10-26 11:05:17,093] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:05:17,093] [8844] [Result.py(107)] - 测试执行通过： test_007_点击电子账户管理发放记录 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:17,093] [8844] [Result.py(59)] - 测试结束： test_007_点击电子账户管理发放记录 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:17,093] [8844] [Result.py(61)] - 耗时： 13.874754200000012
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_05_15_723.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt2.8' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_008_点击电子账户分配: 点击电子账户分配</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.8')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt2.8' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.8').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt2.8: 
+[   INFO] [2021-10-26 11:05:17,093] [8844] [Result.py(48)] - 开始测试： test_008_点击电子账户分配 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:18,197] [8844] [Test002_Business_center_electronic_account_manage.py(19)] - 测试开始
+[   INFO] [2021-10-26 11:05:18,546] [8844] [Test002_Business_center_electronic_account_manage.py(21)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:05:19,615] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:05:19,670] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:05:20,709] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:05:21,739] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:05:22,762] [8844] [Test002_Business_center_electronic_account_manage.py(26)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:05:23,788] [8844] [Test002_Business_center_electronic_account_manage.py(30)] - 点击应用
+[   INFO] [2021-10-26 11:05:24,813] [8844] [Test002_Business_center_electronic_account_manage.py(195)] - 点击电子账户管理
+[   INFO] [2021-10-26 11:05:27,525] [8844] [Test002_Business_center_electronic_account_manage.py(202)] - 点击电子账户分配
+[   INFO] [2021-10-26 11:05:28,563] [8844] [Test002_Business_center_electronic_account_manage.py(206)] - 点击分配账户
+[   INFO] [2021-10-26 11:05:29,601] [8844] [Test002_Business_center_electronic_account_manage.py(210)] - 点击确认按钮
+[   INFO] [2021-10-26 11:05:31,826] [8844] [Test002_Business_center_electronic_account_manage.py(37)] - 测试结束
+[   INFO] [2021-10-26 11:05:31,826] [8844] [Result.py(107)] - 测试执行通过： test_008_点击电子账户分配 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:31,826] [8844] [Result.py(59)] - 测试结束： test_008_点击电子账户分配 (Test002_Business_center_electronic_account_manage.Test_Bceam)
+[   INFO] [2021-10-26 11:05:31,826] [8844] [Result.py(61)] - 耗时： 14.732858899999997
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_05_29_531.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr class='passClass'>
+  <td>Test003_Business_center_inform.Test_Bci</td>
+  <td>1</td>
+  <td class="passCase">1</td>
+  <td class="failCase">0</td>
+  <td class="errorCase">0</td>
+  <td class="skipCase">0</td>
+  <td style="text-align:right;">100.00%</td>
+  <td>
+    <a href="javascript:showClassDetail('c3',1)">
+      <span class="lang-cn">细节</span>
+      <span class="lang-en">Detail</span>
+    </a>
+  </td>
+</tr>
+
+<tr id='pt3.1' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_001_新增一条通知公告: 新增新增一条通知公告测试</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt3.1' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt3.1: 
+[   INFO] [2021-10-26 11:05:31,826] [8844] [Result.py(48)] - 开始测试： test_001_新增一条通知公告 (Test003_Business_center_inform.Test_Bci)
+[   INFO] [2021-10-26 11:05:32,917] [8844] [Test003_Business_center_inform.py(21)] - 测试开始
+[   INFO] [2021-10-26 11:05:33,282] [8844] [Test003_Business_center_inform.py(23)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:05:34,354] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:05:34,429] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:05:35,472] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:05:36,505] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:05:37,527] [8844] [Test003_Business_center_inform.py(28)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:05:38,554] [8844] [Test003_Business_center_inform.py(42)] - 点击应用
+[   INFO] [2021-10-26 11:05:40,582] [8844] [Test003_Business_center_inform.py(46)] - 点击通知公告
+[   INFO] [2021-10-26 11:05:42,715] [8844] [Test003_Business_center_inform.py(53)] - 点击新建通知公告
+[   INFO] [2021-10-26 11:05:42,779] [8844] [Test003_Business_center_inform.py(56)] - 点击选择发布类型
+[   INFO] [2021-10-26 11:05:44,819] [8844] [Test003_Business_center_inform.py(60)] - 点击行政通知
+[   INFO] [2021-10-26 11:05:46,886] [8844] [Test003_Business_center_inform.py(65)] - 点击会议通知
+[   INFO] [2021-10-26 11:05:48,952] [8844] [Test003_Business_center_inform.py(70)] - 点击通知公告
+[   INFO] [2021-10-26 11:05:49,995] [8844] [Test003_Business_center_inform.py(74)] - 点击添加按钮
+[   INFO] [2021-10-26 11:05:50,042] [8844] [Test003_Business_center_inform.py(78)] - 选中通知人员：测试124234
+[   INFO] [2021-10-26 11:05:51,086] [8844] [Test003_Business_center_inform.py(82)] - 点击确认
+[   INFO] [2021-10-26 11:05:53,130] [8844] [Test003_Business_center_inform.py(90)] - 从模板中选择
+[   INFO] [2021-10-26 11:05:53,170] [8844] [Test003_Business_center_inform.py(94)] - 选中方圆间版本更新模板
+[   INFO] [2021-10-26 11:05:54,211] [8844] [Test003_Business_center_inform.py(103)] - 确认
+[   INFO] [2021-10-26 11:05:56,266] [8844] [Test003_Business_center_inform.py(110)] - 预览
+[   INFO] [2021-10-26 11:05:57,304] [8844] [Test003_Business_center_inform.py(114)] - 关闭预览
+[   INFO] [2021-10-26 11:05:58,352] [8844] [Test003_Business_center_inform.py(118)] - 点击发布
+[   INFO] [2021-10-26 11:06:00,612] [8844] [Test003_Business_center_inform.py(35)] - 测试结束
+[   INFO] [2021-10-26 11:06:00,612] [8844] [Result.py(107)] - 测试执行通过： test_001_新增一条通知公告 (Test003_Business_center_inform.Test_Bci)
+[   INFO] [2021-10-26 11:06:00,612] [8844] [Result.py(59)] - 测试结束： test_001_新增一条通知公告 (Test003_Business_center_inform.Test_Bci)
+[   INFO] [2021-10-26 11:06:00,612] [8844] [Result.py(61)] - 耗时： 28.785402000000005
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_05_59_361.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr class='passClass'>
+  <td>Test004_Business_center_payroll_push.Test_Bcpp</td>
+  <td>1</td>
+  <td class="passCase">1</td>
+  <td class="failCase">0</td>
+  <td class="errorCase">0</td>
+  <td class="skipCase">0</td>
+  <td style="text-align:right;">100.00%</td>
+  <td>
+    <a href="javascript:showClassDetail('c4',1)">
+      <span class="lang-cn">细节</span>
+      <span class="lang-en">Detail</span>
+    </a>
+  </td>
+</tr>
+
+<tr id='pt4.1' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_001_工资条推送: 工资条推送测试</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt4.1' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt4.1: 
+[   INFO] [2021-10-26 11:06:00,612] [8844] [Result.py(48)] - 开始测试： test_001_工资条推送 (Test004_Business_center_payroll_push.Test_Bcpp)
+[   INFO] [2021-10-26 11:06:01,716] [8844] [Test004_Business_center_payroll_push.py(18)] - 测试开始
+[   INFO] [2021-10-26 11:06:02,071] [8844] [Test004_Business_center_payroll_push.py(20)] - 打开网址：https://test.chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:06:03,144] [8844] [login.py(15)] - 点击方圆间logo5次
+[   INFO] [2021-10-26 11:06:03,200] [8844] [login.py(19)] - 输入手机号码:19968151428
+[   INFO] [2021-10-26 11:06:04,246] [8844] [login.py(24)] - 输入密码：a123456
+[   INFO] [2021-10-26 11:06:05,281] [8844] [login.py(28)] - 点击登录
+[   INFO] [2021-10-26 11:06:06,303] [8844] [Test004_Business_center_payroll_push.py(25)] - 点击选择企业-创富港
+[   INFO] [2021-10-26 11:06:07,328] [8844] [Test004_Business_center_payroll_push.py(36)] - 点击应用
+[   INFO] [2021-10-26 11:06:08,352] [8844] [Test004_Business_center_payroll_push.py(39)] - 点击工资条推送模块
+[   INFO] [2021-10-26 11:06:09,374] [8844] [Test004_Business_center_payroll_push.py(42)] - 点击推送工资条按钮
+[   INFO] [2021-10-26 11:06:11,398] [8844] [Test004_Business_center_payroll_push.py(48)] - 上传工资单测试文件
+[   INFO] [2021-10-26 11:06:14,434] [8844] [Test004_Business_center_payroll_push.py(52)] - 点击导入按钮
+[   INFO] [2021-10-26 11:06:15,465] [8844] [Test004_Business_center_payroll_push.py(55)] - 点击立即推送
+[   INFO] [2021-10-26 11:06:16,734] [8844] [Test004_Business_center_payroll_push.py(31)] - 测试结束
+[   INFO] [2021-10-26 11:06:16,734] [8844] [Result.py(107)] - 测试执行通过： test_001_工资条推送 (Test004_Business_center_payroll_push.Test_Bcpp)
+[   INFO] [2021-10-26 11:06:16,734] [8844] [Result.py(59)] - 测试结束： test_001_工资条推送 (Test004_Business_center_payroll_push.Test_Bcpp)
+[   INFO] [2021-10-26 11:06:16,734] [8844] [Result.py(61)] - 耗时： 16.121688699999993
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_15_107.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr class='passClass'>
+  <td>Test005_official_website.Test_own</td>
+  <td>7</td>
+  <td class="passCase">7</td>
+  <td class="failCase">0</td>
+  <td class="errorCase">0</td>
+  <td class="skipCase">0</td>
+  <td style="text-align:right;">100.00%</td>
+  <td>
+    <a href="javascript:showClassDetail('c5',7)">
+      <span class="lang-cn">细节</span>
+      <span class="lang-en">Detail</span>
+    </a>
+  </td>
+</tr>
+
+<tr id='pt5.1' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_001_母公司创富港首页: 从方圆间官网跳转至创富港官网首页</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.1' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.1: 
+[   INFO] [2021-10-26 11:06:16,734] [8844] [Result.py(48)] - 开始测试： test_001_母公司创富港首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:17,837] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:18,159] [8844] [Test005_official_website.py(24)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:20,208] [8844] [Test005_official_website.py(30)] - 点击母公司-创富港
+[   INFO] [2021-10-26 11:06:22,595] [8844] [Test005_official_website.py(32)] - 打开网址：https://www.wybgs.com/
+[   INFO] [2021-10-26 11:06:25,207] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:25,207] [8844] [Result.py(107)] - 测试执行通过： test_001_母公司创富港首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:25,207] [8844] [Result.py(59)] - 测试结束： test_001_母公司创富港首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:25,207] [8844] [Result.py(61)] - 耗时： 8.472851899999995
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_24_51.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.2' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_002_首页: 点击方圆间官网首页按钮</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.2' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.2: 
+[   INFO] [2021-10-26 11:06:25,207] [8844] [Result.py(48)] - 开始测试： test_002_首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:26,349] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:26,682] [8844] [Test005_official_website.py(40)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:27,886] [8844] [Test005_official_website.py(43)] - 点击首页
+[   INFO] [2021-10-26 11:06:29,080] [8844] [Test005_official_website.py(46)] - 点击方圆间logo
+[   INFO] [2021-10-26 11:06:31,313] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:31,313] [8844] [Result.py(107)] - 测试执行通过： test_002_首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:31,313] [8844] [Result.py(59)] - 测试结束： test_002_首页 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:31,313] [8844] [Result.py(61)] - 耗时： 6.106071199999974
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_30_140.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.3' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_003_商务合作: 从方圆间官网打开商务合作页面</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.3' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.3: 
+[   INFO] [2021-10-26 11:06:31,313] [8844] [Result.py(48)] - 开始测试： test_003_商务合作 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:32,405] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:32,723] [8844] [Test005_official_website.py(54)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:33,840] [8844] [Test005_official_website.py(57)] - 点击商务合作
+[   INFO] [2021-10-26 11:06:36,075] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:36,075] [8844] [Result.py(107)] - 测试执行通过： test_003_商务合作 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:36,075] [8844] [Result.py(59)] - 测试结束： test_003_商务合作 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:36,075] [8844] [Result.py(61)] - 耗时： 4.760908900000004
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_34_492.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.4' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_004_加入我们: 从方圆间官网打开加入我们页面</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.4' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.4: 
+[   INFO] [2021-10-26 11:06:36,075] [8844] [Result.py(48)] - 开始测试： test_004_加入我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:37,178] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:37,492] [8844] [Test005_official_website.py(66)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:38,596] [8844] [Test005_official_website.py(69)] - 点击加入我们
+[   INFO] [2021-10-26 11:06:40,830] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:40,830] [8844] [Result.py(107)] - 测试执行通过： test_004_加入我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:40,830] [8844] [Result.py(59)] - 测试结束： test_004_加入我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:40,830] [8844] [Result.py(61)] - 耗时： 4.754717499999998
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_39_622.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.5' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_005_关于我们: 从方圆间官网打开关于我们页面</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.5')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.5' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.5').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.5: 
+[   INFO] [2021-10-26 11:06:40,830] [8844] [Result.py(48)] - 开始测试： test_005_关于我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:41,933] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:43,225] [8844] [Test005_official_website.py(78)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:44,389] [8844] [Test005_official_website.py(81)] - 点击关于我们
+[   INFO] [2021-10-26 11:06:46,633] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:46,633] [8844] [Result.py(107)] - 测试执行通过： test_005_关于我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:46,633] [8844] [Result.py(59)] - 测试结束： test_005_关于我们 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:46,633] [8844] [Result.py(61)] - 耗时： 5.802654600000011
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_45_774.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.6' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_006_企业中心: 从方圆间官网打开企业中心页面</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.6')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.6' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.6').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.6: 
+[   INFO] [2021-10-26 11:06:46,633] [8844] [Result.py(48)] - 开始测试： test_006_企业中心 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:47,740] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:48,069] [8844] [Test005_official_website.py(90)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:49,112] [8844] [Test005_official_website.py(93)] - 点击企业中心
+[   INFO] [2021-10-26 11:06:49,381] [8844] [Test005_official_website.py(95)] - 打开网址：https://chuangfuka.com/web/companycenter/#/login
+[   INFO] [2021-10-26 11:06:51,632] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:51,632] [8844] [Result.py(107)] - 测试执行通过： test_006_企业中心 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:51,632] [8844] [Result.py(59)] - 测试结束： test_006_企业中心 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:51,632] [8844] [Result.py(61)] - 耗时： 4.9991761
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_50_530.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+<tr id='pt5.7' class='none'>
+  <td class='passCase'>
+    <div class='testcase'>test_007_帮助文档: 从方圆间官网打开帮助文档页面</div>
+  </td>
+  <td class='passCase' colspan='7' align='center'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.7')">pass</a>
+  </td>
+</tr>
+<tr id='div_pt5.7' class="hiddenRow">
+  <td colspan='8'>
+    <div class="popup_window">
+      <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.7').className = 'hiddenRow' ">[x]</a>
+      </div>
+      <pre>
+pt5.7: 
+[   INFO] [2021-10-26 11:06:51,632] [8844] [Result.py(48)] - 开始测试： test_007_帮助文档 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:52,773] [8844] [Test005_official_website.py(14)] - 测试开始
+[   INFO] [2021-10-26 11:06:53,107] [8844] [Test005_official_website.py(103)] - 打开网址：https://chuangfuka.com/website/fyj/index.html
+[   INFO] [2021-10-26 11:06:54,149] [8844] [Test005_official_website.py(106)] - 点击帮助文档
+[   INFO] [2021-10-26 11:06:55,208] [8844] [Test005_official_website.py(108)] - 打开网址：https://fangyuanjian.yuque.com/books/share/b1fd7619-b103-4a49-9845-e571e2c8691d?#
+[   INFO] [2021-10-26 11:06:57,509] [8844] [Test005_official_website.py(19)] - 测试结束
+[   INFO] [2021-10-26 11:06:57,509] [8844] [Result.py(107)] - 测试执行通过： test_007_帮助文档 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:57,509] [8844] [Result.py(59)] - 测试结束： test_007_帮助文档 (Test005_official_website.Test_own)
+[   INFO] [2021-10-26 11:06:57,509] [8844] [Result.py(61)] - 耗时： 5.8769220000000075
+
+</pre>
+      <div>
+<img class="pic" src='images/image_8844_2021_10_26_11_06_56_380.jpg' alt='' title='' />
+</div>
+    </div>
+  </td>
+</tr>
+
+  <tr id='total_row'>
+    <td>
+    <span class="lang-cn">合计</span>
+    <span class="lang-en">Total</span>
+    </td>
+    <td>20</td>
+    <td class="passCase">20</td>
+    <td class="failCase">0</td>
+    <td class="errorCase">0</td>
+    <td class="skipCase">0</td>
+    <td style="text-align:right;">100.00%</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+ <div id='ending'>&nbsp;</div>
+    <div id="popup">
+      <div class="bg">
+        <img src="" alt="" />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
